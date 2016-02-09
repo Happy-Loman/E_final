@@ -163,6 +163,7 @@ var show_story = window.setInterval(function(){
       switch_tabs_to("bots");
       story_shown = true;
       $("#bots_nav").removeClass("not_displayed");
+      resources.batteries.amount = 100;
       addNewBot(resourceBot);
       window.clearInterval(show_story);
     }
