@@ -1,7 +1,7 @@
 var cell = {
   single:true,
-	x: cw,
-  y: ch,
+	x: 0,
+  	y: 0,
 	energy:0,
 	color: "rgba(104, 155, 205, 0.3)",
 	og_r:0.02,
