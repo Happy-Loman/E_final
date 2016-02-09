@@ -183,18 +183,18 @@ function feed_player(){
 	var food_needed = player.hunger.max - player.hunger.level;
 	if(ship.life.food <= 0){
 		return 0;
-	} else {
-		player.hunger.max += (player.hunger.max * 0.06);
 	}
 	if(ship.life.food <= food_needed || player.hunger.level >= player.hunger.max){
 		if(ship.life.food <= food_needed){
 			player.hunger.level += ship.life.food;
 			ship.life.food = 0;
+			player.hunger.max += (player.hunger.max * 0.06);
 		}
 	} else {
 		if(food_needed > 0){
 			player.hunger.level += food_needed;
 			ship.life.food -= food_needed;
+			player.hunger.max += (player.hunger.max * 0.06);
 		}
 	}	
 }
