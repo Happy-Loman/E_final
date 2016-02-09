@@ -1,48 +1,3 @@
- //Star's//
-var stars = [];
-//Push 10 stars into the array
-for(var i = 0; i < 5000; i++){
-    stars.push({
-      single:true,
-      x:randNum(-map_w, map_w),
-      y:randNum(-map_h, map_h),
-      r:randNum(0.1, 3),
-      energy:0,
-      vx:0,
-      vy:0,
-      pos:i,
-      color:"white",
-    });
-}
-
-function draw_stars(object1){
-      ctx.save();
-      ctx.translate((offset.directionX), (offset.directionY));
-      // clear the viewport
-      //ctx.clearRect(-offset.directionX, -offset.directionY, cw,ch);
-      if(cell.checkCollision(object1)){
-        object1.x = randNum(-map_w, map_w);
-        object1.y = randNum(-map_h, map_h);
-      }
-
-      ctx.beginPath();
-      ctx.arc(object1.x, object1.y, object1.r, 0, (2 * Math.PI));
-      ctx.fillStyle = object1.color;
-      ctx.fill();
-    
-      ctx.restore();
-}
-
-function update_stars(){
-  for (var i = 0; i < stars.length; i++) {
-      var star = stars[i];
-      var dis = return_distance(camera.x, camera.y, star.x, star.y);
-      if(dis < 1800){
-        draw_stars(star);
-      }
-    };
-}
-
 function generalUpdate() {
   GID("parts").innerHTML = format_numbers(parts.amount.toFixed(2)) + "<div style=\"font-size:18px;\">parts<div>";
   GID("energy").innerHTML = format_numbers(cell.energy.toFixed(2)) + "<div style=\"font-size:18px;\">energy<div>";
@@ -70,10 +25,6 @@ function generalUpdate() {
         generator.power -= (generator.power*0.04);
         $("#generate_bar").css("width", ((generator.power/generator.max_power) * 299.5) + "px");
     }
-}
-
-function unlockOverTime(){
-  
 }
 
 var FPS = 100;
