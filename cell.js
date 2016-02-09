@@ -5,13 +5,13 @@ var cell = {
 	energy:0,
 	color: "rgba(104, 155, 205, 0.3)",
 	og_r:0.02,
-	r: 100 + zoom.scale,
+	r: 100,
 	vx:0,
 	vy:0,	
  
 	draw: function(){
 		ctx.save();
-    ctx.translate((offset.directionX), (offset.directionY));
+    //ctx.translate((offset.directionX), (offset.directionY));
 
     ctx.lineWidth = 5;
 
