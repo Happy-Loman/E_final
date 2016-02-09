@@ -41,7 +41,6 @@ window.setInterval(function(){
     update_forms();
     update_machines();
     generalUpdate();
-    unlockOverTime();
     update_player();
   }
 }, 1000/FPS);
