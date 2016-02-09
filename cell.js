@@ -52,7 +52,7 @@ var cell = {
       $("#forms_bots_").removeClass("not_displayed");
     }
 
-    if(this.energy >= 100000){
+    if(this.energy >= 10000){
       upgrades_unlocked = true;
     }
 
