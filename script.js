@@ -167,7 +167,7 @@ var show_story = window.setInterval(function(){
       window.clearInterval(show_story);
     }
   }
-}, 4);
+}, 4000);
 
 display(0);
 window.setTimeout(function(){
