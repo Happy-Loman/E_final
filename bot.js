@@ -328,8 +328,8 @@ function bot_update(){
     var id = 0;
     for (var i = 0; i < bots.length; i++) {
         var bot = bots[i];
-        bot.x += bot.vx;
-        bot.y += bot.vy;
+        bot.x += 0;
+        bot.y += 0;
 
         if(bot.queue.curr_time < bot.queue.time_till){
             bot.queue.curr_time += 20/((60) * bot.queue.time_to_fabricate); //1 second/(number of seconds you want)
@@ -361,8 +361,8 @@ function bot_update(){
 
         if(return_distance(bot.x, bot.y, cell.x, cell.y) < cell.r){
             bot.launching = true;
-            bot.vx = Math.cos(randNum(0, 360)) * bot.speed;
-            bot.vy = Math.sin(randNum(0, 360)) * bot.speed;
+            bot.vx = 0;
+            bot.vy = 0;
         } else {
             bot.launching = false;
         }
@@ -383,7 +383,7 @@ function bot_update(){
 function bot_gather(object){
     var ran =  randNum(0, object.smartness);
     object.color = "White";
-    var ang = return_angle(object.x, object.y, randNum(map_w, -map_w), randNum(map_h, -map_h));
+    var ang = 0;
     if(true){
         if(object.type == "resource"){
             object.time.curr++;//update the bot active time//
