@@ -366,10 +366,9 @@ function bot_update(){
         } else {
             bot.launching = false;
         }
-
+       bot_gather(bot);
         if(bot.active && !bot.launching && bot.queue.ready){
             bot.r = bot.og_r;
-            bot_gather(bot);
         } else {
             bot_return_to_cell(bot);
             if(bot_checkCollision(bot, cell)){
