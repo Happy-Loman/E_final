@@ -1,3 +1,3 @@
 # E_final
 An Incremental/idle game
-Link [ http://happy-loman.github.io/Energy_/ ]
+Link [ http://kunle-lawal.github.io/Energy_/ ]
